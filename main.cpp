@@ -116,82 +116,136 @@ bool rentACar(
 /*
  1)
  */
-bool makeMusic(int playGuiter = 1, int playBass = 2)
-{
-    ignoreUnused(playGuiter, playBass);   
-    return {};    
+bool makeMusic(
+    int playGuiter = 1, 
+    int playBass = 2) 
+
+{  
+    ignoreUnused(playGuiter, playBass);
+    
+    return {};
+
 }
 /*
  2)
  */
-float swim(bool inPool = true, bool inLake = false, bool inRiver = false)
+float swim(
+    bool inPool = true, 
+    bool inLake = false, 
+    bool inRiver = false) 
+
 {
-    ignoreUnused(inPool, inLake, inRiver);   
-    return {};    
+    ignoreUnused(inPool, inLake, inRiver);
+    
+    return {};
+    
 }
 /*
  3)
  */
-double writeCode(char numberOfLines = 'Lots', float quality = 0.1f);
-{
-    ignoreUnused(numberOfLines, quality);   
-    return {};    
+double writeCode(
+    char numberOfLines = 'Lots', 
+    float quality = 0.1f);
+
+{  
+    ignoreUnused(numberOfLines, quality);
+    
+    return {};
+
 }
 /*
  4)
  */
-int driveCar(int howFast = 160);
+int driveCar(
+    int howFast = 160);
+
 {
-    ignoreUnused(howFast);   
-    return {};    
+    ignoreUnused(howFast);
+
+    return {};
+
 }
 /*
  5)
  */
-char makeDinner(int numPeople = 5, int numPlates = 10, int numForks = 10);
+char makeDinner(
+    int numPeople = 5, 
+    int numPlates = 10, 
+    int numForks = 10);
+
 {
-    ignoreUnused(numPeople, numPlates, numForks);   
-    return {};    
+    ignoreUnused(numPeople, numPlates, numForks);
+  
+    return {};
+
 }
 /*
  6)
  */
-int paymentMethod(int ccNumber = 000000, int bankAcct = 000001, bool wireTransfer = true);
+int paymentMethod(
+    int ccNumber = 000000, 
+    int bankAcct = 000001,
+    bool wireTransfer = true);
+
 {
-    ignoreUnused(ccNumber, bankAcct, wireTransfer);   
-    return {};    
+    ignoreUnused(ccNumber, bankAcct, wireTransfer);
+  
+    return {};
+
 }
 /*
  7)
  */
-float frequency(int hz = 220, int cycles = 1, bool phase = true);
+float frequency(
+    int hz = 220, 
+    int cycles = 1, 
+    bool phase = true);
+
 {
-    ignoreUnused(hz, cycles, phase);   
-    return {};    
+    ignoreUnused(hz, cycles, phase);
+
+    return {};
+
 }
 /*
  8)
  */
-bool isGood(bool taste = false);
+bool isGood(
+    bool taste = false);
+
 {
-    ignoreUnused(taste);   
-    return {};    
+    ignoreUnused(taste);
+  
+    return {};
+
 }
 /*
  9)
  */
-double precision(float predict = 0.9f, float vectorX = 0.1f, float vectorY = 0.1f, float vectorZ = 0.1f);
+double precision(
+    float predict = 0.9f, 
+    float vectorX = 0.1f,
+    float vectorY = 0.1f, 
+    float vectorZ = 0.1f);
+
 {
-    ignoreUnused(predict, vectorX, vectorY, vectorZ);   
-    return {};    
+    ignoreUnused(predict, vectorX, vectorY, vectorZ);
+  
+    return {};
+
 }
 /*
  10)
  */
-char madeUpColor(char spectrum = 'foo', char band = 'bar');
+char madeUpColor(
+    char spectrum = 'foo', 
+    char band = 'bar');
+
 {
-    ignoreUnused(spectrum, band);   
-    return {};    
+    ignoreUnused(spectrum, band);
+  
+    return {};
+
 }
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -220,22 +274,26 @@ int main() {
   auto exercise = swim(true, false, false);
   // 3)
   auto coded = writeCode('TooMuch', 0.5f)
-  // 4)
+      // 4)
   auto race = driveCar(200)
-  // 5)
+      // 5)
   auto mealTime = makeDinner(2, 2, 2)
-  // 6)
+      // 6)
   auto takePayment = paymentMethod(0, 1, true)
-  // 7)
+      // 7)
   auto sound = frequency(1, 1, true)
-  // 8)
+      // 8)
   auto evaluate = isGood(false)
-  // 9)
+      // 9)
   auto tensor = precision(0.1f, 0.2f, 0.3f, 0.4f)
-  // 10)
+      // 10)
   auto newColor = madeUpColor('bar', 'qux')
-    
-  ignoreUnused(carRented, musicPlayed, exercise, coded, race, mealTime, takePayment, sound, evaluate, tensor, newColor);
+
+  ignoreUnused(carRented, musicPlayed, exercise, coded, race, mealTime,
+               takePayment, sound, evaluate, tensor, newColor);
+  
   std::cout << "good to go!" << std::endl;
+  
   return 0;
+
 }
