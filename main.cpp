@@ -66,9 +66,7 @@ the 'auto' keyword. c) pass the local variables to ignoreUnused() as you did in
 // 2)
 void variableDeclarations() {
   // example:
-  int number =
-      2; // declaration of a variable named "number", that uses the primitive
-         // type 'int', and the variable's initial value is '2'
+  int number = 2; // declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
 
   int fingers = 5;
   int hands = 2;
@@ -90,8 +88,7 @@ void variableDeclarations() {
   char Y = 'Y';
   char A = 'A';
 
-  ignoreUnused(number, fingers, hands, toes, speed, heading, direction,
-               hasPizza, hasBeer, hasSmile, small, large, trouble, R, Y, A);
+  ignoreUnused(number, fingers, hands, toes, speed, heading, direction, hasPizza, hasBeer, hasSmile, small, large, trouble, R, Y, A);
   // passing each variable declared to the
   // ignoreUnused() function
 }
@@ -101,151 +98,91 @@ void variableDeclarations() {
  example:
  note: this example shows the result after completing steps 3-8
  */
-bool rentACar(
-    int rentalDuration,
-    int carType = 0); // function declaration with random number of arguments,
-                      // arbitrary number of arguments have default value
-
+bool rentACar(int rentalDuration, int carType = 0) // function declaration with random number of arguments, arbitrary number of arguments have default value
 {
-  ignoreUnused(rentalDuration, carType); // passing each function parameter to
-                                         // the ignoreUnused() function
-  return {}; // if your function returns something other than void, add 'return
-             // {};' at the end of it.
+  ignoreUnused(rentalDuration, carType); // passing each function parameter to the ignoreUnused() function
+  return {}; // if your function returns something other than void, add 'return {};' at the end of it.
 }
 
 /*
  1)
  */
-bool makeMusic(
-    int playGuiter = 1, 
-    int playBass = 2) 
-
+bool makeMusic(int playGuiter = 1, int playBass = 2) 
 {  
     ignoreUnused(playGuiter, playBass);
-    
     return {};
-
 }
 /*
  2)
  */
-float swim(
-    bool inPool = true, 
-    bool inLake = false, 
-    bool inRiver = false) 
-
+float swim(bool inPool = true, bool inLake = false, bool inRiver = false) 
 {
     ignoreUnused(inPool, inLake, inRiver);
-    
     return {};
-    
 }
 /*
  3)
  */
-double writeCode(
-    char numberOfLines = 'Lots', 
-    float quality = 0.1f);
-
+double writeCode(char numberOfLines = 'Lots', float quality = 0.1f)
 {  
     ignoreUnused(numberOfLines, quality);
-    
     return {};
-
 }
 /*
  4)
  */
-int driveCar(
-    int howFast = 160);
-
+int driveCar(int howFast = 160)
 {
     ignoreUnused(howFast);
-
     return {};
-
 }
 /*
  5)
  */
-char makeDinner(
-    int numPeople = 5, 
-    int numPlates = 10, 
-    int numForks = 10);
-
+char makeDinner(int numPeople = 5, int numPlates = 10, int numForks = 10)
 {
     ignoreUnused(numPeople, numPlates, numForks);
-  
     return {};
-
 }
 /*
  6)
  */
-int paymentMethod(
-    int ccNumber = 000000, 
-    int bankAcct = 000001,
-    bool wireTransfer = true);
-
+int paymentMethod(int ccNumber = 000000, int bankAcct = 000001, bool wireTransfer = true)
 {
     ignoreUnused(ccNumber, bankAcct, wireTransfer);
-  
     return {};
-
 }
 /*
  7)
  */
-float frequency(
-    int hz = 220, 
-    int cycles = 1, 
-    bool phase = true);
-
+float frequency(int hz = 220, int cycles = 1, bool phase = true)
 {
     ignoreUnused(hz, cycles, phase);
-
     return {};
-
 }
 /*
  8)
  */
-bool isGood(
-    bool taste = false);
-
+bool isGood(bool taste = false)
 {
     ignoreUnused(taste);
-  
     return {};
-
 }
 /*
  9)
  */
-double precision(
-    float predict = 0.9f, 
-    float vectorX = 0.1f,
-    float vectorY = 0.1f, 
-    float vectorZ = 0.1f);
-
+double precision(float predict = 0.9f, float vectorX = 0.1f, float vectorY = 0.1f, float vectorZ = 0.1f)
 {
     ignoreUnused(predict, vectorX, vectorY, vectorZ);
-  
     return {};
-
 }
 /*
  10)
  */
-char madeUpColor(
-    char spectrum = 'foo', 
-    char band = 'bar');
-
+char madeUpColor(char spectrum = 'foo', char band = 'bar')
 {
     ignoreUnused(spectrum, band);
-  
     return {};
-
 }
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -266,34 +203,29 @@ char madeUpColor(
 int main() {
   // example of calling that function, storing the value, and passing it to
   // ignoreUnused at the end of main()
-  auto carRented = rentACar(6, 2);
+    auto carRented = rentACar(6, 2);
+    // 1)
+    auto musicPlayed = makeMusic(1, 2);
+    // 2)
+    auto exercise = swim(true, false, false);
+    // 3)
+    auto coded = writeCode('TooMuch', 0.5f);
+    // 4)
+    auto race = driveCar(200);
+    // 5)
+    auto mealTime = makeDinner(2, 2, 2);
+    // 6)
+    auto takePayment = paymentMethod(0, 1, true);
+    // 7)
+    auto sound = frequency(1, 1, true);
+    // 8)
+    auto evaluate = isGood(false);
+    // 9)
+    auto tensor = precision(0.1f, 0.2f, 0.3f, 0.4f);
+    // 10)
+    auto newColor = madeUpColor('bar', 'qux');
 
-  // 1)
-  auto musicPlayed = makeMusic(1, 2);
-  // 2)
-  auto exercise = swim(true, false, false);
-  // 3)
-  auto coded = writeCode('TooMuch', 0.5f)
-      // 4)
-  auto race = driveCar(200)
-      // 5)
-  auto mealTime = makeDinner(2, 2, 2)
-      // 6)
-  auto takePayment = paymentMethod(0, 1, true)
-      // 7)
-  auto sound = frequency(1, 1, true)
-      // 8)
-  auto evaluate = isGood(false)
-      // 9)
-  auto tensor = precision(0.1f, 0.2f, 0.3f, 0.4f)
-      // 10)
-  auto newColor = madeUpColor('bar', 'qux')
-
-  ignoreUnused(carRented, musicPlayed, exercise, coded, race, mealTime,
-               takePayment, sound, evaluate, tensor, newColor);
-  
-  std::cout << "good to go!" << std::endl;
-  
-  return 0;
-
+    ignoreUnused(carRented, musicPlayed, exercise, coded, race, mealTime, takePayment, sound, evaluate, tensor, newColor);
+    std::cout << "good to go!" << std::endl;
+    return 0;
 }
