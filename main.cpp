@@ -150,9 +150,9 @@ int paymentMethod(int ccNumber = 000000, int bankAcct = 000001, bool wireTransfe
 /*
  7)
  */
-float frequency(int hz = 220, int cycles = 1, bool phase = true)
+float makeNoise(int loudness = 220, int type = 1, bool phase = true)
 {
-    ignoreUnused(hz, cycles, phase);
+    ignoreUnused(loudness, type, phase);
     return {};
 }
 /*
@@ -166,7 +166,7 @@ bool isGood(bool taste = false)
 /*
  9)
  */
-double precision(float predict = 0.9f, float vectorX = 0.1f, float vectorY = 0.1f, float vectorZ = 0.1f)
+double computePrecision(float predict = 0.9f, float vectorX = 0.1f, float vectorY = 0.1f, float vectorZ = 0.1f)
 {
     ignoreUnused(predict, vectorX, vectorY, vectorZ);
     return {};
@@ -174,7 +174,7 @@ double precision(float predict = 0.9f, float vectorX = 0.1f, float vectorY = 0.1
 /*
  10)
  */
-char madeUpColor(char spectrum = 'foo', char band = 'bar')
+char changeColor(char spectrum = 'foo', char band = 'bar')
 {
     ignoreUnused(spectrum, band);
     return {};
@@ -213,13 +213,13 @@ int main()
     // 6)
     auto takePayment = paymentMethod(0, 1, true);
     // 7)
-    auto sound = frequency(1, 1, true);
+    auto sound = makeNoise(1, 1, true);
     // 8)
     auto evaluate = isGood(false);
     // 9)
-    auto tensor = precision(0.1f, 0.2f, 0.3f, 0.4f);
+    auto tensor = computePrecision(0.1f, 0.2f, 0.3f, 0.4f);
     // 10)
-    auto newColor = madeUpColor('bar', 'qux');
+    auto newColor = changeColor('bar', 'qux');
 
     ignoreUnused(carRented, musicPlayed, exercise, coded, race, mealTime, takePayment, sound, evaluate, tensor, newColor);
     std::cout << "good to go!" << std::endl;
