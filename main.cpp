@@ -75,9 +75,9 @@ void variableDeclarations()
     bool hasBeer = true;
     bool hasSmile = true;
     
-    double small = 0.00f;
-    double large = 1.00f;
-    double trouble = 0.5f;
+    double small = 0.00;
+    double large = 1.00;
+    double trouble = 0.5;
     
     char R = 'R';
     char Y = 'Y';
@@ -118,7 +118,7 @@ float swim(bool inPool = true, bool inLake = false, bool inRiver = false)
 /*
  3)
  */
-double writeCode(char numberOfLines = 'Lots', float quality = 0.1f)
+double writeCode(char numberOfLines = 'L', float quality = 0.1f)
 {  
     ignoreUnused(numberOfLines, quality);
     return {};
@@ -174,7 +174,7 @@ double computePrecision(float predict = 0.9f, float vectorX = 0.1f, float vector
 /*
  10)
  */
-char changeColor(char spectrum = 'foo', char band = 'bar')
+char changeColor(char spectrum = 'F', char band = 'B')
 {
     ignoreUnused(spectrum, band);
     return {};
@@ -205,7 +205,7 @@ int main()
     // 2)
     auto exercise = swim(true, false, false);
     // 3)
-    auto coded = writeCode('TooMuch', 0.5f);
+    auto coded = writeCode('T', 0.5f);
     // 4)
     auto race = driveCar(200);
     // 5)
@@ -219,7 +219,7 @@ int main()
     // 9)
     auto tensor = computePrecision(0.1f, 0.2f, 0.3f, 0.4f);
     // 10)
-    auto newColor = changeColor('bar', 'qux');
+    auto newColor = changeColor('B', 'Q');
 
     ignoreUnused(carRented, musicPlayed, exercise, coded, race, mealTime, takePayment, sound, evaluate, tensor, newColor);
     std::cout << "good to go!" << std::endl;
